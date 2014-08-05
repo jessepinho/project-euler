@@ -9,3 +9,6 @@ largest_prime_factor = 0
   end
 end
 p largest_prime_factor
+
+# todo: write own version of prime?(); figure out efficient method for identify-
+# ing prime factors
