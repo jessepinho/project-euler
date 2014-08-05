@@ -49,7 +49,7 @@ end
 
 class Griderator
 
-  @highest_product = 0
+  @@highest_product = 0
 
   def self.griderate grid
     x = 0
@@ -62,8 +62,8 @@ class Griderator
       dirs = [:e, :s, :se, :sw]
       dirs.each do |dir|
         dir_series = grid.series(x, y, dir)
-        if dir_series.length == 4 && (product = dir_series.reduce(:*)) > @highest_product
-          @highest_product = product
+        if dir_series.length == 4 && (product = dir_series.reduce(:*)) > @@highest_product
+          @@highest_product = product
         end
       end
 
@@ -78,7 +78,7 @@ class Griderator
       end
     end
 
-    @highest_product
+    @@highest_product
   end
 end
 
